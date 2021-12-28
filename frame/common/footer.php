@@ -1,31 +1,40 @@
     <style>
 
-    footer {background-color: #78909c; color: white; text-align: center;}
-    .footer {margin: 5px 0px;}
-    footer a {color: white;}
-
-    </style>
+    footer {font-size: 14px; font-weight: 300px; text-align: center;}
+    .ank {position: fixed; bottom: 50px; right: 50px; cursor: pointer; z-index: 2;}
+    .ank .btn {border-radius: 50%; background-color: rgba(51,51,51,0.4); width: 46px;; height: 46px; transition: all ease 0.3s;}
+    .copyright li {display: inline-block; color: #666666; line-height: 22px;}
+    .copyright .line {color: #d3d3d3; margin: 0 10px;}
+    footer .copy {clear: both; display: block; margin-top: 10px;}
     
+    </style>
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/config.php";
+?>
     <footer>
-        <div class="footer first">
-            <span><a href="">소개</a></span>
-            <span><a href="">이용약관</a></span>
-            <span><a href="">개인정보처리방침</a></span>
+        <div class="ank">
+            <div class="btn">
+                <img src= "<?=$PATH['RESOURCES']?>/img/scroll.png">
+            </div>
         </div>
+        <div class="copyright">
+            <ul>
+                <li>상호명 : <?=$ETC['NAME']?></li>
+                <li class="line">/</li>
 
-        <div class="footer second">
-            <span>위례성농원펜션</span>
-            <span>대표 : 장덕훈</span>
-            <span>사업자등록번호 : 312-32-62521</span>
-        </div>
+                <li>대표 : <?=$ETC['CEO']?></li>
+                <li class="line">/</li>
 
-        <div class="footer third">
-            <span>충청남도 천안시 동남구 북면 위례성로 777-32</span></br>
-            <span>전화번호 : 041-553-1852</span>
-        </div>
+                <li>Tel : <?=$ETC['TEL']?></li>
+                <li class="line">/</li>
 
-        <div class="footer last">
-            <span>Copyright (c) 위례성농원펜션 All rights reserved.</span>
+                <li>사업자등록번호 : <?=$ETC['REGISTRATION']?></li>
+                <li class="line">/</li>
+                
+                <li>E-mail : <?=$ETC['EMAIL']?></li>
+
+                <li class="copy">Copyright © Design MZ All rights reserved.</li>
+            </ul>
         </div>
     </footer>
 </body>
